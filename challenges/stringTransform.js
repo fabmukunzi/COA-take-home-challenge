@@ -7,14 +7,14 @@ const transformString = (str) => {
       .join('')
       .split('')
       .map((char) => char.charCodeAt(0))
-      .join('');
+      .join(' ');
   } else if (length % 3 === 0) {
     return str.split('').reverse().join('');
   } else if (length % 5 === 0) {
     return str
       .split('')
       .map((char) => char.charCodeAt(0))
-      .join('');
+      .join(' ');
   } else {
     return str;
   }

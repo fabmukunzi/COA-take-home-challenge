@@ -11,6 +11,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 2px;
+  height: 100vh;
 }
 .image-container {
   width: 293px;
@@ -59,6 +60,8 @@ svg {
 img {
   transition: all 0.3s ease-in-out;
   height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 .description {
   position: absolute;
