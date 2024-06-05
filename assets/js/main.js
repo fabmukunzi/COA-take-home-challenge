@@ -23,4 +23,28 @@ const handleImageHover = () => {
     });
   });
 };
+const handleFullSizeView = () => {
+  const learnMoreButtons = document.querySelectorAll('.learn-more');
+  const fullSizePhoto = document.querySelector('.full-size-photo');
+  const fullSizePhotoImg = fullSizePhoto.querySelector('img');
+  const closeBtn = document.querySelector('.close-btn');
+  const modal = document.querySelector('.modal');
+
+  learnMoreButtons.forEach((button, index) => {
+    button.addEventListener('click', () => {
+      const imgSrc = document.querySelector(
+        `.images-container .image-container:nth-child(${index + 1}) img`
+      ).src;
+      fullSizePhotoImg.src = imgSrc;
+      modal.style.display = 'block';
+      fullSizePhoto.style.display = 'block';
+    });
+  });
+
+  closeBtn.addEventListener('click', () => {
+    modal.style.display = 'none';
+    fullSizePhoto.style.display = 'none';
+  });
+};
+handleFullSizeView();
 handleImageHover();
